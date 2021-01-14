@@ -1,7 +1,8 @@
 package com.paulfolio.chscovidtracker.models;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CountyStats {
@@ -10,12 +11,12 @@ public class CountyStats {
     private String county;
     private int latestTotal;
     private int newCases;
-    private Date lastUpdate;
+    private LocalDateTime lastUpdate;
     List<String> headerDates = new ArrayList<>();
     List<Integer> newCasesList = new ArrayList<>();
 
     public CountyStats() {
-        lastUpdate = new Date();
+        lastUpdate = LocalDateTime.now(ZoneId.of("America/New_York"));
     }
 
     public String getState() {
@@ -42,7 +43,7 @@ public class CountyStats {
         this.latestTotal = latestTotal;
     }
 
-    public Date getLastUpdate() {
+    public LocalDateTime getLastUpdate() {
         return lastUpdate;
     }
 
