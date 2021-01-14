@@ -23,7 +23,7 @@ public class HomeController {
         model.addAttribute("totalStateCases", sumTotal);
         model.addAttribute("newStateCases",newTotal);
         model.addAttribute("countyStats", allStats);
-        model.addAttribute("lastUpdate",countyDataService.getMetaData().getLastUpdate().toLocaleString());
+        model.addAttribute("lastUpdate",countyDataService.getMetaData().getLastUpdate());
         model.addAttribute("today",countyDataService.getMetaData().getTodayDate());
         model.addAttribute("headerDates",countyDataService.getMetaData().getHeaderDates());
         return "home";
