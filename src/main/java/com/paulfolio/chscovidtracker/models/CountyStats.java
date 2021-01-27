@@ -35,7 +35,7 @@ public class CountyStats {
         this.county = county;
     }
 
-    public int getLatestTotal() {
+    public Integer getLatestTotal() {
         return latestTotal;
     }
 
@@ -47,7 +47,7 @@ public class CountyStats {
         return lastUpdate;
     }
 
-    public int getNewCases() {
+    public Integer getNewCases() {
         return newCases;
     }
 
